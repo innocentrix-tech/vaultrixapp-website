@@ -1,0 +1,21 @@
+CNAME
+  s_14a2bfc33cc6e1::t_f0f16463058a1e 1
+index.html
+  s_14a2bfc33cc6e1::t_27b9f2860dbbca 1-140
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4ab7935d7d331eb0fc746fcd42bc332af37ab864",
+  "prompts": {},
+  "sessions": {
+    "s_14a2bfc33cc6e1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e41868da-4d24-4448-bd50-5a6285b6a207",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Shubham Gupta <shubham.gupta@nirvanatech.com>"
+    }
+  }
+}
