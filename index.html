@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Static page with no scripts: lock everything down to same-origin images and inline styles. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Vaultrix — Secure What Matters</title>
+  <meta name="description" content="Vaultrix is a private vault for what matters most. Coming soon from Innocentrix.">
+  <meta name="theme-color" content="#060d22">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="canonical" href="https://vaultrixapp.in/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vaultrixapp.in/">
+  <meta property="og:title" content="Vaultrix — Secure What Matters">
+  <meta property="og:description" content="A private vault for what matters most. Coming soon.">
+  <meta property="og:image" content="https://vaultrixapp.in/assets/logo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root {
+      --bg: #060d22;
+      --text: #e7e8ff;
+      --muted: #9ea3d6;
+      --violet: #8b5cf6;
+      --blue: #4f6bff;
+      --line: rgba(158, 163, 214, 0.18);
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background:
+        radial-gradient(60rem 40rem at 50% 30%, rgba(79, 107, 255, 0.16), transparent 70%),
+        radial-gradient(40rem 30rem at 85% 0%, rgba(139, 92, 246, 0.14), transparent 70%),
+        var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 40rem;
+      padding: 3rem 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .logo {
+      width: min(22rem, 78vw);
+      height: auto;
+      /* The logo ships on its own navy background. Lighten lets the brighter page glow replace that
+         backdrop, and the mask fades the edges where the backdrop is lighter than the page. */
+      mix-blend-mode: lighten;
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent), linear-gradient(to bottom, transparent, #000 6%, #000 95%, transparent), radial-gradient(circle at 100% 0, transparent, #000 22%);
+      -webkit-mask-composite: source-in;
+      mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent), linear-gradient(to bottom, transparent, #000 6%, #000 95%, transparent), radial-gradient(circle at 100% 0, transparent, #000 22%);
+      mask-composite: intersect;
+    }
+    .badge {
+      margin-top: 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text);
+      background: rgba(139, 92, 246, 0.08);
+    }
+    .dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--violet), var(--blue));
+      box-shadow: 0 0 0.75rem var(--violet);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse { 50% { opacity: 0.35; } }
+    @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+    h1 {
+      margin-top: 1.5rem;
+      font-size: clamp(1.6rem, 5vw, 2.25rem);
+      line-height: 1.25;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+    .lede {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+      text-wrap: pretty;
+    }
+    .contact {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    a {
+      color: var(--text);
+      text-decoration-color: var(--violet);
+      text-underline-offset: 0.2em;
+    }
+    a:hover { color: #fff; text-decoration-color: currentColor; }
+    a:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; border-radius: 2px; }
+    footer {
+      width: 100%;
+      padding: 1.5rem 1rem 2rem;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="assets/logo.jpg" width="960" height="943" alt="Vaultrix — Secure what matters">
+    <p class="badge"><span class="dot" aria-hidden="true"></span>Coming soon</p>
+    <h1>The things that matter most deserve a better place to live.</h1>
+    <p class="lede">Encrypted on your device, readable only by you. Built so that not even we can look inside.</p>
+    <p class="contact">Want to hear when we launch? <a href="mailto:hello@innocentrix.tech">hello@innocentrix.tech</a></p>
+  </main>
+  <footer>
+    © 2026 Vaultrix · A product of <a href="https://innocentrix.tech" rel="noopener">innocentrix.tech</a>
+  </footer>
+</body>
+</html>
